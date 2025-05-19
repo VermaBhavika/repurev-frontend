@@ -1,0 +1,13 @@
+@import 'variable';
+@import 'mixins';
+
+.buttonLink {
+    text-decoration: underline;
+    color: $black;
+}
+
+.button {
+    @include box-with-radius($primary, $black);
+    padding: 10px 20px;
+    max-width: max-content;
+}

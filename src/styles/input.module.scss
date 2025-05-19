@@ -1,0 +1,10 @@
+@import 'variable';
+@import 'mixins';
+
+.input{
+    @include box-with-radius($primary, $black);
+    padding: 10px 20px;
+    &::placeholder{
+        color: $secondary;        
+    }
+}

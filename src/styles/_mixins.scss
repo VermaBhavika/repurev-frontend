@@ -1,0 +1,6 @@
+@mixin box-with-radius($background, $color){
+    background: $background;
+    color: $color;
+    border-radius: 10px;
+    border: unset;
+}
