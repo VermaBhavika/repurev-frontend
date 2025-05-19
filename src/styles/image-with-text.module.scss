@@ -1,0 +1,14 @@
+
+.outer {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  .image{
+    max-width: 40%;
+    width: 100%;
+  }
+  .text{
+    max-width: 60%;
+    width: 100%;
+  }
+}

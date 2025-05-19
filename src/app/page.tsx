@@ -3,6 +3,8 @@ import Heading from "@/components/shared/heading";
 import Button from "@/components/shared/button";
 import MyChart from "@/components/common/chart";
 import CustomSlider from "@/components/common/custom-slider";
+import ImageWithText from "@/components/common/image-with-text";
+import data from '../static-data/static.json'
 
 export default function Home() {
   const chartData = {
@@ -32,32 +34,24 @@ export default function Home() {
       borderWidth: 1,
     }],
   };
-  const slides=[
+  const slides = [
     {
       "heading": "Build a perfect app that grows on you users",
       "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
-      "image":""
+      "image": ""
     },
     {
       "heading": "Build a perfect app that grows on you users",
       "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
-      "image":""
+      "image": ""
     }
   ]
 
 
+
   return (
-      <main className="main">
-        <Heading tagName="h2" headingText="Enter Company Details" />
-        <TextField type="text" placeholderText="Enter your value" />
-        <Button buttonType="link" buttonLink="https://www.google.com" buttonText="Link" />
-        <Button buttonType="button" buttonText="Button" />
-        <div className="charts">
-          <MyChart type="bar" data={chartData} />
-          <MyChart type="line" data={chartData} />
-          <MyChart type="pie" data={chartData} />
-        </div>
-        <CustomSlider slidesData ={slides}/>
-      </main>
+    <main className="main">
+     
+    </main>
   );
 }

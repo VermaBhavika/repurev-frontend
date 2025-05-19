@@ -4,3 +4,17 @@
     border-radius: 10px;
     border: unset;
 }
+@mixin button-style($background, $color, $hover-background){
+    background: $background;
+    color: $color;
+    text-transform: capitalize;
+    &:hover{
+        background: $hover-background;
+    }
+}
+@mixin text-style($font-size, $color, $line-height){
+    font-size: $font-size;
+    color: $color;
+    line-height: $line-height;
+    margin-bottom: 12px;
+}

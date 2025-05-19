@@ -1,4 +1,5 @@
 @import 'variable';
+@import 'mixins';
 
 body {
   font-family: $global;
@@ -12,11 +13,49 @@ body {
   padding: 0;
   margin: 0;
 }
+h1{
+  @include text-style($font40, $black, $line50);
+}
+h2{
+  @include text-style($font35, $black, $line45);
+}
+h3{
+  @include text-style($font30, $black, $line40);
+}
+h4{
+  @include text-style($font25, $black, $line35);
+}
+h5{
+  @include text-style($font20, $black, $line30);
+}
+h6{
+  @include text-style($font15, $black, $line25)
+}
+p{
+  @include text-style($font16, $black, $line25)
+}
+img{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
 .main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-  max-width: 800px;
+  display: block;
+  width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
   margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mb-20{
+  margin-bottom: 20px;
 }

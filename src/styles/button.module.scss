@@ -4,10 +4,36 @@
 .buttonLink {
     text-decoration: underline;
     color: $black;
+    text-transform: capitalize;
 }
 
 .button {
     @include box-with-radius($primary, $black);
     padding: 10px 20px;
     max-width: max-content;
+
+    &.btn-primary {
+        @include button-style($primary-btn, $white, $primary-btn-hover)
+    }
+
+    &.btn-secondary {
+        @include button-style($secondary, $white, $secondary-btn-hover)
+    }
+
+    &.btn-success {
+        @include button-style($success-btn, $white, $success-btn-hover)
+    }
+
+    &.btn-danger {
+        @include button-style($danger-btn, $white, $danger-btn-hover)
+    }
+
+    &.btn-warning {
+        @include button-style($warning-btn, $white, $warning-btn-hover)
+    }
+
+    &.btn-dark {
+        @include button-style($dark-btn, $white, $dark-btn-hover)
+    }
 }
+

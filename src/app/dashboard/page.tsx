@@ -15,7 +15,7 @@ const Dashboard = () =>{
             <form onSubmit={handleSubmit}>
                 <TextField type="url" placeholderText="Company Domain Url"/>
                 <TextField type="text" placeholderText="Company Name"/>
-                <Button buttonText="Analyse"/>
+                {/* <Button buttonText="Analyse"/> */}
             </form>
         </div>
     )

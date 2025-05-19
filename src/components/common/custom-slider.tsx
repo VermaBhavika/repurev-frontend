@@ -15,7 +15,6 @@ interface CustomSlider {
    slidesData?: Slide[]; 
 }
 const CustomSlider: React.FC<CustomSlider> = ({ slidesData = [] }) => {
-  console.log(slidesData)
   const settings = {
    dots: true,
     infinite: true,
