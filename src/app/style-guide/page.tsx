@@ -3,6 +3,7 @@ import data from '../../static-data/static.json';
 import Button from "@/components/shared/button";
 import ImageWithText from "@/components/common/image-with-text";
 import CustomSlider from "@/components/common/custom-slider";
+import Cards from "@/components/common/cards";
 
 const StyleGuide = () => {
     return (
@@ -38,6 +39,11 @@ const StyleGuide = () => {
                 <div className="mb-20">
                     <CustomSlider slidesData={data?.slider}
                     />
+                    <div className="flex mb-20">
+                        {data?.cards.map((cards, index) => (
+                            <Cards key={index} data={cards} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
