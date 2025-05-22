@@ -16,19 +16,20 @@ interface ImageWithTextProps {
         heading?: string;
         image?: string;
         text?: string;
+        image_direction?: string;
     } & ButtonProps;
 }
 
 const ImageWithText: React.FC<ImageWithTextProps> = ({ data }) => {
     if (!data) return null;
-    const { heading, image, text, button_title, button_type, button_link } = data;
+    const { heading, image, text, button_title, button_type, button_link, image_direction } = data;
     const hasButton = button_title || button_type || button_link;
     const buttonData: ButtonProps | null = hasButton
         ? { button_title, button_type, button_link }
         : null;
 
     return (
-        <div className={styles.outer}>
+        <div className={`${styles.outer} ${image_direction=="right" ? styles.reverse : ''}`}>
             <div className={styles.image}>
                 <Image
                     src={image || "https://s3.amazonaws.com/my-bucket/profile.png"}

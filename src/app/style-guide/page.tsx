@@ -2,6 +2,7 @@ import Heading from "@/components/shared/heading";
 import data from '../../static-data/static.json';
 import Button from "@/components/shared/button";
 import ImageWithText from "@/components/common/image-with-text";
+import CustomSlider from "@/components/common/custom-slider";
 
 const StyleGuide = () => {
     return (
@@ -23,9 +24,21 @@ const StyleGuide = () => {
                     tagName="h2"
                     headingText="Image with Text"
                 />
-                <ImageWithText
-                    data={data?.image_with_text}
+                {data?.image_with_text?.map((item, index) => (
+                    <div className="mb-20" key={index}>
+                        <ImageWithText
+                            data={item}
+                        />
+                    </div>
+                ))}
+                <Heading
+                    tagName="h2"
+                    headingText="Slider"
                 />
+                <div className="mb-20">
+                    <CustomSlider slidesData={data?.slider}
+                    />
+                </div>
             </div>
         </div>
     )

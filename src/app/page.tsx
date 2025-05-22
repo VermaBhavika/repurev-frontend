@@ -34,21 +34,6 @@ export default function Home() {
       borderWidth: 1,
     }],
   };
-  const slides = [
-    {
-      "heading": "Build a perfect app that grows on you users",
-      "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
-      "image": ""
-    },
-    {
-      "heading": "Build a perfect app that grows on you users",
-      "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
-      "image": ""
-    }
-  ]
-
-
-
   return (
     <main className="main">
      

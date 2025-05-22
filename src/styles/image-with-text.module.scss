@@ -3,9 +3,15 @@
   display: flex;
   gap: 20px;
   align-items: stretch;
+  &.reverse{
+    flex-direction: row-reverse;
+  }
   .image{
     max-width: 40%;
     width: 100%;
+    img{
+        border-radius: 10px;
+    }
   }
   .text{
     max-width: 60%;
