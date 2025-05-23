@@ -17,13 +17,12 @@ interface CustomSlider {
 }
 const CustomSlider: React.FC<CustomSlider> = ({ slidesData = [] }) => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1
   };
-  console.log(styles.slide)
 
   return (
     <Slider {...settings}>
