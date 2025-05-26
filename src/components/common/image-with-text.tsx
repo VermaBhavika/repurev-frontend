@@ -9,6 +9,7 @@ interface ButtonProps {
     button_title?: string;
     button_type?: string;
     button_link?: string;
+    button_style?: string;
 }
 
 interface ImageWithTextProps {
@@ -17,19 +18,17 @@ interface ImageWithTextProps {
         image?: string;
         text?: string;
         image_direction?: string;
-    } & ButtonProps;
+        button?: ButtonProps;
+    };
 }
 
 const ImageWithText: React.FC<ImageWithTextProps> = ({ data }) => {
     if (!data) return null;
-    const { heading, image, text, button_title, button_type, button_link, image_direction } = data;
-    const hasButton = button_title || button_type || button_link;
-    const buttonData: ButtonProps | null = hasButton
-        ? { button_title, button_type, button_link }
-        : null;
+
+    const { heading, image, text, image_direction, button } = data;
 
     return (
-        <div className={`${styles.outer} ${image_direction=="right" ? styles.reverse : ''}`}>
+        <div className={`${styles.outer} ${image_direction === "right" ? styles.reverse : ""}`}>
             <div className={styles.image}>
                 <Image
                     src={image || "https://s3.amazonaws.com/my-bucket/profile.png"}
@@ -41,7 +40,7 @@ const ImageWithText: React.FC<ImageWithTextProps> = ({ data }) => {
             <div className={styles.text}>
                 {heading && <Heading tagName="h3" headingText={heading} />}
                 {text && <Paragraph paraText={text} />}
-                {buttonData && <Button data={buttonData} />}
+                {button && <Button data={button} />}
             </div>
         </div>
     );

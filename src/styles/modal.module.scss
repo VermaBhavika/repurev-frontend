@@ -1,0 +1,56 @@
+@import "variable";
+.modalOverlay {
+    position: fixed; // important for full screen overlay
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    overflow-y: auto; // allow scrolling inside overlay if content is tall
+
+    &::before {
+        content: '';
+        background: $black-shadow;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .modalContent {
+        position: relative;
+        border-radius: 20px;
+        max-width: 1000px;
+        width: 100%;
+        border: 1px solid $light-gray;
+        background: $lighter-gray;
+        padding: 25px;
+        z-index: 1000;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: translateY(-50%);
+
+        .closeButton {
+            position: absolute;
+            right: 25px;
+            top: 15px;
+            border-radius: 50%;
+            border: unset;
+            background: $white;
+            height: 25px;
+            width: 25px;
+            font-size: $font20;
+            text-align: center;
+            cursor: pointer;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+            display: block;
+        }
+    }
+}

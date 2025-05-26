@@ -10,13 +10,19 @@ import Paragraph from "@/components/shared/paragraph";
 import Charts from "@/components/common/chart";
 import TextField from "@/components/shared/input";
 import { isValidEmail } from '@/validators/input-validator';
+import Modal from '@/components/common/modal';
 
 const StyleGuide = () => {
     const [formData, setFormData] = useState<{ [key: string]: string }>({
-        email:"",
+        email: "",
         password: ""
     });
     const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
 
     const validators: { [key: string]: (value: string) => boolean } = {
         email: isValidEmail,
@@ -64,17 +70,14 @@ const StyleGuide = () => {
             console.log("Form has errors, cannot submit.");
             return;
         }
-        else{
+        else {
             console.log("Form submitted successfully with data:", formData);
         }
-
-        
     };
-
-console.log(formErrors)
     return (
         <div className="guides">
             <div className="container">
+
                 <Heading
                     tagName="h2"
                     headingText="Typography"
@@ -197,6 +200,16 @@ console.log(formErrors)
                         <Button data={data?.submit_button} />
                     </form>
 
+                </div>
+                <div className='mt-20'>
+                    <Heading
+                        tagName="h2"
+                        headingText="Modal button"
+                    />
+                    <div onClick={() => setIsModalOpen(true)}>
+                        <Button data={data?.regular_button} />
+                    </div>
+                    {isModalOpen && <Modal isOpen={isModalOpen} onClose={handleCloseModal} modalData={data?.modal_data} />}
                 </div>
             </div>
         </div>

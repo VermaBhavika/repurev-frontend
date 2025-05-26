@@ -4,6 +4,9 @@
 .input{
     @include box-with-radius($primary, $black);
     padding: 10px 20px;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
     &::placeholder{
         color: $secondary;        
     }

@@ -3,56 +3,68 @@
             "heading": "Lorem Ipsum",
             "image": "https://dummyimage.com/600x400/000/fff",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            "button_title": "click me",
-            "button_style": "primary",
-            "image_direction": "left"
+            "image_direction": "left",
+            "button": {
+                "button_title": "click me",
+                "button_style": "primary"
+            }
         },
         {
             "heading": "Lorem Ipsum",
             "image": "https://dummyimage.com/600x400/000/fff",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            "button_title": "click me",
-            "button_style": "primary",
-            "image_direction": "right"
+            "image_direction": "right",
+            "button": {
+                "button_title": "click me",
+                "button_style": "primary"
+            }
         }
     ],
     "cards": [{
             "image": "https://dummyimage.com/600x400/000/fff",
             "heading": "Lorem Ipsum",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
-            "button_title": "View Insights",
-            "button_type": "link", 
-            "button_style": "link"
+            "button": {
+                "button_title": "View Insights",
+                "button_type": "link",
+                "button_style": "link"
+            }
         },
         {
             "image": "https://dummyimage.com/600x400/000/fff",
             "heading": "Lorem Ipsum",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
-            "button_title": "View Insights",
-            "button_type": "link",
-            "button_style": "link"
+            "button": {
+                "button_title": "View Insights",
+                "button_type": "link",
+                "button_style": "link"
+            }
         },
         {
             "image": "https://dummyimage.com/600x400/000/fff",
             "heading": "Lorem Ipsum",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
-            "button_title": "View Insights",
-            "button_type": "link",
-            "button_style": "link"
+            "button": {
+                "button_title": "View Insights",
+                "button_type": "link",
+                "button_style": "link"
+            }
         },
         {
             "image": "https://dummyimage.com/600x400/000/fff",
             "heading": "Lorem Ipsum",
             "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.",
-            "button_title": "View Insights",
-            "button_type": "link",
-            "button_style": "link"
+            "button": {
+                "button_title": "View Insights",
+                "button_type": "link",
+                "button_style": "link"
+            }
         }
     ],
     "button": [{
             "button_title": "link",
-            "button_style": "link",
-            "button_link": "https://google.com"
+            "button_link": "https://google.com",
+            "button_type": "link"
         },
         {
             "button_title": "primary",
@@ -80,15 +92,12 @@
         }
     ],
     "style_guide": {
-
         "button_title": "click Here",
         "button_type": "link",
         "button_link": "/style-guide",
         "button_style": "link"
-
     },
     "submit_button": {
-
         "button_title": "Submit",
         "button_type": "submit",
         "button_style": "primary"
@@ -96,7 +105,12 @@
     "slider": [{
             "heading": "Build a perfect app that grows on you users",
             "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
-            "image": "https://dummyimage.com/600x400/000/fff"
+            "image": "https://dummyimage.com/600x400/000/fff",
+            "button":{
+                "button_title": "Button",
+        "button_type": "button",
+        "button_style": "primary"
+            }
         },
         {
             "heading": "Build a perfect app that grows on you users",
@@ -132,5 +146,20 @@
             ],
             "borderWidth": 1
         }]
+    },
+    "modal_data": {
+        "heading": "This is modal heading",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. ",
+        "image": "https://dummyimage.com/600x400/000/fff",
+        "button": {
+            "button_title": "Click Me!",
+            "button_type": "button",
+            "button_style": "primary"
+        }
+    },
+    "regular_button": {
+        "button_title": "Modal",
+        "button_type": "button",
+        "button_style": "primary"
     }
 }
