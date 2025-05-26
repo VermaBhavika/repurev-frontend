@@ -6,7 +6,8 @@ interface Button {
     data?: {
         button_title?: string,
         button_type?: string,
-        button_link?: string
+        button_link?: string,
+        button_style?: string
     }
 }
 
@@ -14,18 +15,26 @@ const Button: React.FC<Button> = ({ data }) => {
     if (!data) return null;
     const isExternal = data?.button_link?.startsWith("https");
     return (
-        data?.button_type == 'link' ?
+        data?.button_type == 'link' ? (
             <Link
                 href={data?.button_link || "#"}
                 target={isExternal ? "_blank" : "_self"}
                 className={styles.buttonLink}>
                 {data?.button_title || "click me"}
-            </Link> :
+            </Link>
+        ) : data?.button_type == 'submit' ? (
             <button
-                type="button"
-                className={`${styles.button} ${styles[`btn-${data?.button_type}`]}`}>
+                type="submit"
+                className={`${styles.button} ${styles[`btn-${data?.button_style}`]}`}>
                 {data.button_title}
             </button>
+        ) : (
+            <button
+                type="button"
+                className={`${styles.button} ${styles[`btn-${data?.button_style}`]}`}>
+                {data.button_title}
+            </button>
+        )
     )
 }
 

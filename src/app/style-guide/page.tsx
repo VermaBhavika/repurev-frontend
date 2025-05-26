@@ -1,3 +1,5 @@
+"use client"
+import React, { useState } from 'react';
 import Heading from "@/components/shared/heading";
 import data from '../../static-data/static.json';
 import Button from "@/components/shared/button";
@@ -6,8 +8,70 @@ import CustomSlider from "@/components/common/custom-slider";
 import Cards from "@/components/common/cards";
 import Paragraph from "@/components/shared/paragraph";
 import Charts from "@/components/common/chart";
+import TextField from "@/components/shared/input";
+import { isValidEmail } from '@/validators/input-validator';
 
 const StyleGuide = () => {
+    const [formData, setFormData] = useState<{ [key: string]: string }>({
+        email:"",
+        password: ""
+    });
+    const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
+
+    const validators: { [key: string]: (value: string) => boolean } = {
+        email: isValidEmail,
+        password: (val: string) => val.length >= 4,
+    };
+
+    const handleInputChange = (name: string, value: string) => {
+        setFormData(prev => ({ ...prev, [name]: value }));
+
+        if (validators[name]) {
+            const valid = validators[name](value);
+            setFormErrors(prev => ({
+                ...prev,
+                [name]: valid ? '' : `Invalid ${name}`,
+            }));
+        } else {
+            setFormErrors(prev => ({ ...prev, [name]: '' }));
+        }
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        let valid = true;
+        const newErrors: { [key: string]: string } = {};
+
+        for (const field of Object.keys(validators)) {
+            const value = formData[field] || '';
+
+            if (!value.trim()) {
+                valid = false;
+                newErrors[field] = `${field} is required`;
+                continue;
+            }
+
+            if (!validators[field](value)) {
+                valid = false;
+                newErrors[field] = `Invalid ${field}`;
+            }
+        }
+
+        setFormErrors(newErrors);
+
+        if (!valid) {
+            console.log("Form has errors, cannot submit.");
+            return;
+        }
+        else{
+            console.log("Form submitted successfully with data:", formData);
+        }
+
+        
+    };
+
+console.log(formErrors)
     return (
         <div className="guides">
             <div className="container">
@@ -91,12 +155,49 @@ const StyleGuide = () => {
                     headingText="Charts"
                 />
                 <div className="flex justify-center">
-                    <Charts type="bar" data={data?.chartData} width={300} height={300} />
-                    <Charts type="line" data={data?.chartData} width={300} height={300} />
-                    <Charts type="pie" data={data?.chartData} width={300} height={300}/>
+                    <Charts
+                        type="bar"
+                        data={data?.chartData}
+                        width={300}
+                        height={300}
+                    />
+                    <Charts
+                        type="line"
+                        data={data?.chartData}
+                        width={300}
+                        height={300}
+                    />
+                    <Charts
+                        type="pie"
+                        data={data?.chartData}
+                        width={300}
+                        height={300}
+                    />
                 </div>
+                <Heading
+                    tagName="h2"
+                    headingText="Form"
+                />
+                <div className="">
+                    <form onSubmit={handleSubmit}>
+                        <TextField
+                            type="email"
+                            placeholderText="Enter your Email"
+                            len={50}
+                            name="email"
+                            onChange={handleInputChange}
+                        />
+                        <TextField
+                            type="password"
+                            placeholderText="Enter your Password"
+                            len={10}
+                            name="password"
+                            onChange={handleInputChange}
+                        />
+                        <Button data={data?.submit_button} />
+                    </form>
 
-
+                </div>
             </div>
         </div>
     )
