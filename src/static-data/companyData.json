@@ -7,7 +7,8 @@
             "perception": 8.3,
             "power_of_voice": 9,
             "sentiments": 0,
-            "overall": 80
+            "overall": 80,
+            "historical": [30,57,89,34]
         },
         {
             "company_domain": "https://www.cisco.com/",
@@ -17,7 +18,8 @@
             "perception": 9.9,
             "power_of_voice": 15,
             "sentiments": 13,
-            "overall": 67
+            "overall": 67,
+            "historical": [30,57,89,34]
         },
         {
             "company_domain": "https://www.collibra.com/",
@@ -27,7 +29,8 @@
             "perception": 2.3,
             "power_of_voice": 3,
             "sentiments": 5,
-            "overall": 37
+            "overall": 37,
+            "historical": [30,57,89,34]
         }
     ]
 }

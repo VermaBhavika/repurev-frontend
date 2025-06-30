@@ -1,8 +1,29 @@
-.slide{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-.slide_text{
-    display: block;
+@import 'variable';
+
+
+.customslider {
+    padding: 0 20px;
+
+    .slide {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-top: 30px;
+        background: $white;
+        border-radius: 20px;
+        overflow: hidden;
+        justify-content: space-between;
+
+        .slide_text {
+            display: block;
+            padding-left: 30px;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 20px;
+            }
+        }
+    }   
 }

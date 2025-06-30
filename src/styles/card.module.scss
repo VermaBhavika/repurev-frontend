@@ -2,13 +2,19 @@
     border-radius: 20px;
     border: 1px solid #c3c3c3;
     overflow: hidden;
-    padding-bottom: 15px;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    // padding-bottom: 15px;
 
-    .cardSection_image {
-        height: 200px;
-    }
+    // .cardSection_image {
+    //     height: 200px;
+    // }
     .cartSection_text{
         padding: 0 15px;
+        text-align: center;
+        margin: 20px 0px;
+        
     }   
 
 }

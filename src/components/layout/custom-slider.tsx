@@ -28,25 +28,28 @@ interface CustomSlider {
 
 const CustomSlider: React.FC<CustomSlider> = ({ slidesData = [] }) => {
   const settings = {
-    dots: false,
-    infinite: true,
     speed: 500,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "360px",
     slidesToShow: 1,
-    slidesToScroll: 1
+    infinite: true,
+    arrows: false,
+    dots: true,
   };
 
   return (
     <Slider {...settings}>
       {slidesData.map((slide, index) => (
-        <div key={index}>
+        <div key={index} className={styles.customslider}>
           <div className={styles.slide}>
+            <div className={styles.slide_text}>
+              {slide.heading && <h4>{slide.heading}</h4>}
+              {slide.p && <div dangerouslySetInnerHTML={{ __html: slide.p }} className="mb-20" />}
+              {slide.button && <Button data={slide.button} />}
+            </div>
             <div className={styles.slide_image}>
               {slide.image && <img src={slide.image} alt={`Slide ${index + 1}`} />}
-            </div>
-            <div className={styles.slide_text}>
-              {slide.heading && <h3>{slide.heading}</h3>}
-              {slide.p && <div dangerouslySetInnerHTML={{ __html: slide.p }} className="mb-20"/>}
-              {slide.button && <Button data={slide.button} />}
             </div>
           </div>
         </div>

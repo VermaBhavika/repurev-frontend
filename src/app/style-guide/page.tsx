@@ -4,7 +4,7 @@ import Heading from "@/components/ui/heading";
 import data from '../../static-data/static.json';
 import Button from "@/components/ui/button";
 import ImageWithText from "@/components/common/image-with-text";
-import CustomSlider from "@/components/common/custom-slider";
+import CustomSlider from "@/components/layout/custom-slider";
 import Cards from "@/components/common/cards";
 import Paragraph from "@/components/ui/paragraph";
 import Charts from "@/components/common/chart";
@@ -145,7 +145,7 @@ const StyleGuide = () => {
                     tagName="h2"
                     headingText="Cards"
                 />
-                <div className="grid grid-4 mt-20 mb-20">
+                <div className="grid grid-3 mt-20 mb-20">
                     {data?.cards.map((cards, index) => (
                         <Cards
                             key={index}

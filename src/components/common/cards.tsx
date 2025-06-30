@@ -51,13 +51,13 @@ const chart = {
                         src={image}
                         alt="card image"
                         width={400}
-                        height={200}
+                        height={400}
                     />
                 )}
                 {chartData &&
                     <Charts  data={chart}
-                        width={300}
-                        height={300} type="pie" />
+                        width={400}
+                        height={400} type="pie" />
                 }
             </div>
             <div className={styles.cartSection_text}>

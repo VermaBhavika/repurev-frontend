@@ -105,17 +105,23 @@
     "slider": [{
             "heading": "Build a perfect app that grows on you users",
             "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
-            "image": "https://dummyimage.com/600x400/000/fff",
-            "button":{
-                "button_title": "Button",
-        "button_type": "button",
-        "button_style": "primary"
-            }
+            "image": "https://dummyimage.com/600x400/000/fff"
+           
         },
         {
             "heading": "Build a perfect app that grows on you users",
             "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
-            "image": ""
+            "image": "https://dummyimage.com/600x400/000/fff"
+        },
+        {
+            "heading": "Build a perfect app that grows on you users",
+            "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
+            "image": "https://dummyimage.com/600x400/000/fff"
+        },
+        {
+            "heading": "Build a perfect app that grows on you users",
+            "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
+            "image": "https://dummyimage.com/600x400/000/fff"
         }
     ],
     "chartData": {
