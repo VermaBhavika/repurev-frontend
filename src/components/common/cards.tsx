@@ -1,8 +1,9 @@
-import Heading from "../shared/heading";
-import Paragraph from "../shared/paragraph";
+import Heading from "../ui/heading";
+import Paragraph from "../ui/paragraph";
 import Image from "next/image";
-import Button from "../shared/button";
+import Button from "../ui/button";
 import styles from "../../styles/card.module.scss";
+import Charts from "./chart";
 
 interface ButtonProps {
     button_title?: string;
@@ -17,13 +18,30 @@ interface CardsProps {
         text?: string;
         image?: string;
         button?: ButtonProps;
+        chartData?: number;
     };
 }
 
 const Cards: React.FC<CardsProps> = ({ data }) => {
     if (!data) return null;
 
-    const { heading, image, text, button } = data;
+    const { heading, image, text, button, chartData } = data;
+const chart = {
+    labels: [heading, "Remaining"],
+    datasets: [{
+        label: heading || "Score",
+        data: [chartData || 0, 20 - (chartData || 0)],
+        backgroundColor: [
+            "rgba(75, 192, 192, 0.7)",
+            "rgba(201, 203, 207, 0.3)"
+        ],
+        borderColor: [
+            "rgba(75, 192, 192, 1)",
+            "rgba(201, 203, 207, 1)"
+        ],
+        borderWidth: 1
+    }]
+};
 
     return (
         <div className={styles.cardSection}>
@@ -36,6 +54,11 @@ const Cards: React.FC<CardsProps> = ({ data }) => {
                         height={200}
                     />
                 )}
+                {chartData &&
+                    <Charts  data={chart}
+                        width={300}
+                        height={300} type="pie" />
+                }
             </div>
             <div className={styles.cartSection_text}>
                 {heading && <Heading tagName="h4" headingText={heading} />}

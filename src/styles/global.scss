@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background: $bodyColor
 }
 
 * {
@@ -98,4 +99,14 @@ ul {
 
 .mt-20 {
   margin-top: 20px;
+}
+.container{
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.innerContainer{
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
 }

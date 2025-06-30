@@ -1,14 +1,14 @@
 "use client"
 import React, { useState } from 'react';
-import Heading from "@/components/shared/heading";
+import Heading from "@/components/ui/heading";
 import data from '../../static-data/static.json';
-import Button from "@/components/shared/button";
+import Button from "@/components/ui/button";
 import ImageWithText from "@/components/common/image-with-text";
 import CustomSlider from "@/components/common/custom-slider";
 import Cards from "@/components/common/cards";
-import Paragraph from "@/components/shared/paragraph";
+import Paragraph from "@/components/ui/paragraph";
 import Charts from "@/components/common/chart";
-import TextField from "@/components/shared/input";
+import TextField from "@/components/ui/input";
 import { isValidEmail } from '@/validators/input-validator';
 import Modal from '@/components/common/modal';
 
@@ -103,7 +103,7 @@ const StyleGuide = () => {
                     headingText="Heading 5"
                 />
                 <Heading
-                    tagName="h5"
+                    tagName="h6"
                     headingText="Heading 6"
                 />
                 <Paragraph

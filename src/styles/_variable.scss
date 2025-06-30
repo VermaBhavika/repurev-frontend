@@ -2,12 +2,13 @@
 $global: 'Arial';
 
 // colors
-$primary: #d9d9d9;
+$primary: #696cff;
+$primary-gray: #d9d9d9;
 $secondary: #484848;
+$bodyColor: #f5f5f9;
 $black: #000;
 $white: #fff;
-$primary-btn: #007bff;
-$primary-btn-hover: #0069d9;
+$primary-btn-hover: #5f61e6;
 $secondary-btn: #6c757d;
 $secondary-btn-hover: #5a6268;
 $success-btn: #28a745;
@@ -39,3 +40,6 @@ $line40: 40px;
 $line35: 35px;
 $line30: 30px;
 $line25: 25px;
+
+// box shadow
+$box-shadow: 0 0 0.375rem 0.25rem rgba(161, 172, 184, 0.15)

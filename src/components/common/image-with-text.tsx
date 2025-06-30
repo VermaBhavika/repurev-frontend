@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Button from "../shared/button";
-import Heading from "../shared/heading";
-import Paragraph from "../shared/paragraph";
+import Button from "../ui/button";
+import Heading from "../ui/heading";
+import Paragraph from "../ui/paragraph";
 import styles from "../../styles/image-with-text.module.scss";
 
 interface ButtonProps {

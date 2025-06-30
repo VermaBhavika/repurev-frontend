@@ -1,0 +1,33 @@
+{
+    "company_data": [{
+            "company_domain": "https://growthnatives.com/",
+            "company_name": "growth natvies",
+            "engagement": 19,
+            "awareness": 5.5,
+            "perception": 8.3,
+            "power_of_voice": 9,
+            "sentiments": 0,
+            "overall": 50
+        },
+        {
+            "company_domain": "https://www.cisco.com/",
+            "company_name": "CIsco",
+            "engagement": 10,
+            "awareness": 6.5,
+            "perception": 9.9,
+            "power_of_voice": 15,
+            "sentiments": 13,
+            "overall": 50
+        },
+        {
+            "company_domain": "https://www.collibra.com/",
+            "company_name": "Collibra",
+            "engagement": 2,
+            "awareness": 5.5,
+            "perception": 2.3,
+            "power_of_voice": 9,
+            "sentiments": 5,
+            "overall": 50
+        }
+    ]
+}

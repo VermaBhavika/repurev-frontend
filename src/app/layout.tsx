@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import  "../styles/global.scss";
+import Header from "@/components/layout/header";
 
 export const metadata: Metadata = {
   title: "Repurev meter",
@@ -14,7 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <Header/>
+        {children}        
       </body>
     </html>
   );

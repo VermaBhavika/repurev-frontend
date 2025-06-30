@@ -8,12 +8,12 @@
 }
 
 .button {
-    @include box-with-radius($primary, $black);
+    @include box-with-radius($primary-gray, $black);
     padding: 10px 20px;
     max-width: max-content;
 
     &.btn-primary {
-        @include button-style($primary-btn, $white, $primary-btn-hover)
+        @include button-style($primary, $white, $primary-btn-hover)
     }
 
     &.btn-secondary {

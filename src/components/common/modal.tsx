@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/modal.module.scss"; // your own styling
 import Image from "next/image";
-import Button from "../shared/button";
+import Button from "../ui/button";
 
 interface ModalProps {
     isOpen: boolean;

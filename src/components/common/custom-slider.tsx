@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../styles/slider.module.scss";
 
-import Button from "../shared/button"; // Import Button
+import Button from "../ui/button"; // Import Button
 
 interface ButtonProps {
   button_title?: string;

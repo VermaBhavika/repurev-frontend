@@ -1,0 +1,10 @@
+@import "variable";
+
+.dashboardLayout{
+    .companyForm{
+        background: $white;
+        box-shadow: $box-shadow;
+        border-radius: 12px;
+        padding: 20px;
+    }
+}
