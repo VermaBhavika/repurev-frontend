@@ -45,7 +45,6 @@ const Dashboard = () => {
     const handleInputChange = (name: string, value: string) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
-    console.log(staticJson)
     const PieChart = {
         "labels": [
             "Overall Scrore"

@@ -7,7 +7,7 @@
             "perception": 8.3,
             "power_of_voice": 9,
             "sentiments": 0,
-            "overall": 50
+            "overall": 80
         },
         {
             "company_domain": "https://www.cisco.com/",
@@ -17,7 +17,7 @@
             "perception": 9.9,
             "power_of_voice": 15,
             "sentiments": 13,
-            "overall": 50
+            "overall": 67
         },
         {
             "company_domain": "https://www.collibra.com/",
@@ -25,9 +25,9 @@
             "engagement": 2,
             "awareness": 5.5,
             "perception": 2.3,
-            "power_of_voice": 9,
+            "power_of_voice": 3,
             "sentiments": 5,
-            "overall": 50
+            "overall": 37
         }
     ]
 }
