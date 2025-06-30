@@ -32,11 +32,11 @@ const chart = {
         label: heading || "Score",
         data: [chartData || 0, 20 - (chartData || 0)],
         backgroundColor: [
-            "rgba(75, 192, 192, 0.7)",
-            "rgba(201, 203, 207, 0.3)"
+            "#9966ffa1",
+            "rgba(201, 203, 207, 0.5)"
         ],
         borderColor: [
-            "rgba(75, 192, 192, 1)",
+            "#9966ff",
             "rgba(201, 203, 207, 1)"
         ],
         borderWidth: 1
@@ -50,14 +50,14 @@ const chart = {
                     <Image
                         src={image}
                         alt="card image"
-                        width={400}
-                        height={400}
+                        width={300}
+                        height={300}
                     />
                 )}
                 {chartData &&
                     <Charts  data={chart}
-                        width={400}
-                        height={400} type="pie" />
+                        width={300}
+                        height={300} type="pie" />
                 }
             </div>
             <div className={styles.cartSection_text}>

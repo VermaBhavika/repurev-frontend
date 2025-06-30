@@ -167,5 +167,10 @@
         "button_title": "Modal",
         "button_type": "button",
         "button_style": "primary"
+    },
+    "comparison_button": {
+        "button_title": "Compare Score",
+        "button_type": "button",
+        "button_style": "primary"
     }
 }

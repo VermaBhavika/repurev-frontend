@@ -1,20 +1,16 @@
+@import 'variable';
+
 .cardSection {
     border-radius: 20px;
-    border: 1px solid #c3c3c3;
+    border: 1px solid $light-gray;
     overflow: hidden;
-        display: flex;
+    display: flex;
     flex-direction: column;
+    background-color: $white;
     align-items: center;
-    // padding-bottom: 15px;
-
-    // .cardSection_image {
-    //     height: 200px;
-    // }
-    .cartSection_text{
+    .cartSection_text {
         padding: 0 15px;
         text-align: center;
         margin: 20px 0px;
-        
-    }   
-
+    }
 }

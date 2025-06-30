@@ -6,7 +6,7 @@
             "awareness": 5.5,
             "perception": 8.3,
             "power_of_voice": 9,
-            "sentiments": 0,
+            "sentiments": 10,
             "overall": 80,
             "historical": [30,57,89,34]
         },
