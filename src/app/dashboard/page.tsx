@@ -57,7 +57,7 @@ const Dashboard = () => {
         if (showLoader) {
             const timeout = setTimeout(() => {
                 setShowLoader(false);
-            },100); 
+            },10000); 
             return () => clearTimeout(timeout);
         }
     }, [showLoader]);
