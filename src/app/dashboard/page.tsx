@@ -136,7 +136,7 @@ const Dashboard = () => {
                             <Heading tagName="h4" headingText="Score Breakdown" />
                         </div>
 
-                        <div className="comparison-dropdown mt-20 mb-40">
+                        <div className="comparison-dropdown">
                             <label htmlFor="company-select" >
                                 Compare with:
                             </label>
@@ -167,9 +167,9 @@ const Dashboard = () => {
                                 <Cards data={{ heading: "Perception", text: `Your perception score is ${staticJson.perception} out of 20.`, chartData: staticJson.perception }} />
                                 <Cards data={{ heading: "Sentiments", text: `Your sentiments score is ${staticJson.sentiments} out of 20.`, chartData: staticJson.sentiments }} />
                             </div>
-
+                            <div className="vertical-line"></div>
                             {selectedComparisonData && (
-                                <div className="comparison-card-container" style={{ flex: 1 }}>
+                                <div className="comparison-card-container grid grid-1" style={{ flex: 1 }}>
                                     <Cards data={{ heading: `Awareness - ${selectedComparisonData.company_name}`, text: `Score: ${selectedComparisonData.awareness} / 20`, chartData: selectedComparisonData.awareness }} />
                                     <Cards data={{ heading: "Power of Voice", text: `Score: ${selectedComparisonData.power_of_voice} / 20`, chartData: selectedComparisonData.power_of_voice }} />
                                     <Cards data={{ heading: "Engagements", text: `Score: ${selectedComparisonData.engagement} / 20`, chartData: selectedComparisonData.engagement }} />

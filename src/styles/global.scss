@@ -161,7 +161,7 @@ ul {
   display: flex;
   justify-content: space-around;
   .chart-item{
-    background-color: white;
+    background-color: $white;
     padding: 40px;
     border-radius: 40px;
   }
@@ -171,6 +171,13 @@ ul {
 //second component
 .score-breakdown {
   padding: 40px 0px;
+  position: relative;
+
+  .comparison-dropdown{
+    position: absolute;
+    top: 40px;
+    right: 0px;
+  }
   .main-heading {
     text-align: center;
   }
@@ -194,11 +201,28 @@ ul {
   flex-direction: column;
   align-items: center;
   .line-chart-container{
-    background-color: white;
+    background-color: $white;
     padding: 40px;
     border-radius: 40px;
   }
 }
 .comparison-cards-wrapper{
   display: flex;
+}
+
+
+//comparison
+
+.compare-cards{
+  display: flex;
+  gap: 150px;
+  .comparison-card-container{
+    padding-top: 40px;
+    gap: 60px;
+  }
+  .vertical-line{
+    margin-top: 40px;
+  width: 1px;
+  background-color: $black; 
+  }
 }

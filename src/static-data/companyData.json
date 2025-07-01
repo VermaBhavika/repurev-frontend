@@ -31,6 +31,28 @@
             "sentiments": 5,
             "overall": 37,
             "historical": [30,57,89,34]
+        },
+        {
+            "company_domain": "https://centerbase.com/",
+            "company_name": "Centerbase",
+            "engagement": 2,
+            "awareness": 5.5,
+            "perception": 2.3,
+            "power_of_voice": 3,
+            "sentiments": 5,
+            "overall": 37,
+            "historical": [30,57,89,34]
+        },
+        {
+            "company_domain": "https://foundever.com/",
+            "company_name": "Foundever",
+            "engagement": 2,
+            "awareness": 5.5,
+            "perception": 2.3,
+            "power_of_voice": 3,
+            "sentiments": 5,
+            "overall": 37,
+            "historical": [30,57,89,34]
         }
     ]
 }
