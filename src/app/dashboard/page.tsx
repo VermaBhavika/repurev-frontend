@@ -10,6 +10,7 @@ import staticDetails from "../../static-data/companyData.json";
 import Charts from "@/components/common/chart";
 import Cards from "@/components/common/cards";
 import CustomSlider from "@/components/layout/custom-slider";
+import Header from "@/components/layout/header";
 
 const Dashboard = () => {
     const [formData, setFormData] = useState<{ [key: string]: string }>({
@@ -67,10 +68,10 @@ const Dashboard = () => {
     );
 
     const PieChart = {
-        labels: ["Overall Score"],
+        labels: ["Overall Score", "Remaining"],
         datasets: [{
             data: [staticJson?.overall, 100 - staticJson?.overall],
-            backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)"],
+            backgroundColor: ["rgba(255, 99, 132)", "rgba(255, 159, 64)"],
             borderColor: ["rgb(255, 99, 132)", "rgb(255, 159, 64)"],
             borderWidth: 1
         }]
@@ -80,7 +81,7 @@ const Dashboard = () => {
         labels: ["Benchmark", "Overall Score"],
         datasets: [{
             data: [90, staticJson?.overall],
-            backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(255, 159, 64, 0.2)"],
+            backgroundColor: ["rgba(255, 99, 132)", "rgba(255, 159, 64)"],
             borderColor: ["rgb(255, 99, 132)", "rgb(255, 159, 64)"],
             borderWidth: 1
         }]
@@ -98,6 +99,7 @@ const Dashboard = () => {
 
     return (
         <div className={styles.dashboardLayout}>
+             <Header/>
             {!showStats ? (
                 <div className="innerContainer">
                     <div className={styles.companyForm}>
@@ -121,7 +123,7 @@ const Dashboard = () => {
                         <Heading tagName="h4" headingText="Your Overall Brand Score" />
                         <div className="chart-container">
                             <div className="chart-item">
-                                <Charts type="pie" data={PieChart} width={400} height={400} />
+                                <Charts type="doughnut" data={PieChart} width={400} height={400} />
                             </div>
 
                             <div className="chart-item">

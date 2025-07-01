@@ -11,12 +11,13 @@ import {
 Chart.register(...registerables);
 
 interface MyChartProps {
-  type: 'bar' | 'line' | 'pie';
-  data: ChartConfiguration<'bar' | 'line' | 'pie'>['data'];
-  options?: ChartConfiguration<'bar' | 'line' | 'pie'>['options'];
+  type: 'bar' | 'line' | 'pie' | 'doughnut';
+  data: ChartConfiguration['data'];
+  options?: ChartConfiguration['options'];
   width?: string | number;
   height?: string | number;
 }
+
 
 const Charts: React.FC<MyChartProps> = ({ type, data, options, width = 600, height = 400 }) => {
   const chartRef = useRef<HTMLCanvasElement>(null);

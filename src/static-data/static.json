@@ -106,7 +106,7 @@
             "heading": "Build a perfect app that grows on you users",
             "p": "<ul><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li><li>Speed up research using visual data insights</li></ul>",
             "image": "https://dummyimage.com/600x400/000/fff"
-           
+
         },
         {
             "heading": "Build a perfect app that grows on you users",
@@ -172,5 +172,19 @@
         "button_title": "Compare Score",
         "button_type": "button",
         "button_style": "primary"
-    }
+    },
+
+    "user_data": [{
+            "email": "ranjanrishav87@gmail.com",
+            "password": "Rishav@1234"
+        },
+        {
+            "email": "bhavika.verma@growthnatives.com",
+            "password": "Bhavika@1234"
+        },
+        {
+            "email": "eshu.arora@growthnatives.co",
+            "password": "EshuArora@1234"
+        }
+    ]
 }
