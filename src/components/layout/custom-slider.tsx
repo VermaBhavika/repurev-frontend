@@ -31,7 +31,7 @@ const CustomSlider: React.FC<CustomSlider> = ({ slidesData = [] }) => {
     speed: 500,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "360px",
+    centerPadding: "300px",
     slidesToShow: 1,
     infinite: true,
     arrows: false,

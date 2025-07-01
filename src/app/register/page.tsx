@@ -36,7 +36,6 @@ const Registration: React.FC = () => {
     const [isSubmit, setIsSubmit] = useState(false);
 
     useEffect(() => {
-        console.log(formErrors);
         if (Object.keys(formErrors).length === 0 && isSubmit) {
             toast.success("Sign Up Successfully");
         }

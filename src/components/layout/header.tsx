@@ -1,12 +1,24 @@
-"use client"
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Cookies from "js-cookie";
 import avatar from "../../assets/images/user.svg";
 import styles from "../../styles/header.module.scss";
 import Heading from "../ui/heading";
 
 const Header = () => {
+    const router = useRouter();
     const [isProfileOpen, setProfileOpen] = useState(false);
+
+    const handleLogout = () => {
+        Cookies.remove("is_logged_in");
+        Cookies.remove("user_email");
+        Cookies.remove("user_name");
+
+        router.push("/login");
+    };
+
     return (
         <header className={styles.header}>
             <div className="container">
@@ -17,7 +29,7 @@ const Header = () => {
                     <div className={styles.profile} onClick={() => setProfileOpen(!isProfileOpen)}>
                         <Image src={avatar} alt="avatar icon" width={1} height={1} />
                     </div>
-                    {isProfileOpen &&
+                    {isProfileOpen && (
                         <div className={styles.dropdown}>
                             <ul>
                                 <li>
@@ -25,17 +37,20 @@ const Header = () => {
                                         <Image src={avatar} alt="avatar icon" width={1} height={1} />
                                     </div>
                                     <div className={styles.profileInfo}>
-                                        <span>John Doe</span>
+                                        <span>{Cookies.get("user_name") || "Guest"}</span>
                                         <small>Admin</small>
                                     </div>
                                 </li>
+                                <li onClick={handleLogout} style={{ cursor: "pointer" }}>
+                                    Logout
+                                </li>
                             </ul>
                         </div>
-                    }
+                    )}
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};
 
 export default Header;
