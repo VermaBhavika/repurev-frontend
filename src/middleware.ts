@@ -6,8 +6,7 @@ export function middleware(request: NextRequest) {
 
   const isPublicPath =
     path === '/login' ||
-    path === '/register' ||
-    path === '/';
+    path === '/register' 
 
   const token = request.cookies.get('is_logged_in')?.value || '';
 

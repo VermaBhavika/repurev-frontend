@@ -11,7 +11,7 @@
         height: 70px;
         align-items: center;
         justify-content: space-between;
-        padding: 20px;        
+        padding: 20px;
         position: relative;
         background: $white;
 
@@ -37,20 +37,27 @@
             padding: 20px;
             right: 0;
             top: 70px;
-            width: 250px;
+            width: 220px;
             height: 100%;
+            display: flex;
+            align-items: center;
 
-            li {
-                display: flex;
-                list-style: none;
-                align-items: center;
-                justify-content: space-between;
-                gap: 10px;
-                img{
-                    width: 20px;
-                    height: 20px;
+            ul {
+                padding-left: 0;
+
+                li {
+                    display: flex;
+                    list-style: none;
+                    align-items: center;
+                    gap: 10px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
+
         }
     }
 }

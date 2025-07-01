@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import avatar from "../../assets/images/user.svg";
+import logout from "../../assets/images/logout.svg";
 import styles from "../../styles/header.module.scss";
 import Heading from "../ui/heading";
 
@@ -32,17 +33,8 @@ const Header = () => {
                     {isProfileOpen && (
                         <div className={styles.dropdown}>
                             <ul>
-                                <li>
-                                    <div className={styles.profile}>
-                                        <Image src={avatar} alt="avatar icon" width={1} height={1} />
-                                    </div>
-                                    <div className={styles.profileInfo}>
-                                        <span>{Cookies.get("user_name") || "Guest"}</span>
-                                        <small>Admin</small>
-                                    </div>
-                                </li>
                                 <li onClick={handleLogout} style={{ cursor: "pointer" }}>
-                                    Logout
+                                   <Image src={logout} height={20} width={20} alt="logout icon"/> Logout
                                 </li>
                             </ul>
                         </div>
